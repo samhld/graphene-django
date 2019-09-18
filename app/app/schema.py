@@ -6,13 +6,8 @@ import tracks.schema
 class Query(tracks.schema.Query, graphene.ObjectType):
     pass
 
-# define schema here
-schema = graphene.Schema(query=Query)
-
-import graphene
-import tracks.schema
-
-class Query(tracks.schema.Query, graphene.ObjectType):
+class Mutation(tracks.schema.Mutation, graphene.ObjectType):
     pass
 
-schema = graphene.Schema(query=Query)
+# define schema here
+schema = graphene.Schema(query=Query, mutation=Mutation)
