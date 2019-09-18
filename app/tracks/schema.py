@@ -21,12 +21,10 @@ class CreateTrack(graphene.Mutation):
         description = graphene.String()
         url = graphene.String()
 
-    def mutate(self, info, title, description, url):
-        track = Track(title=title, description=description,
-                      url=url, posted_by=user)
+    def mutate(self, info, title, description):
+        track = Track(title=title, description=description)
         track.save()
         return CreateTrack(track=track)
-
 
 
 class Mutation(graphene.ObjectType):

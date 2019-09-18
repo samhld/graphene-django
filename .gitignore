@@ -1,2 +1,4 @@
 Pipfile
 .vscode
+app/db.sqlite3
+app/tracks/migrations
