@@ -1,5 +1,5 @@
 import graphene
-from graphene-django import DjangoObjectType
+from graphene_django import DjangoObjectType
 
 from .models import Track
 
