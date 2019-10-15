@@ -14,3 +14,6 @@ class Track(models.Model):
     #note that, when track is created, an id is automatically created
     #id will serve as primary key for track
 
+class Like(models.Model):
+    user = models.ForeignKey(get_user_model(), null=True, on_delete=models.CASCADE)
+    track = models.ForeignKey('tracks.Track', related_name='likes', on_delete=models.CASCADE)
